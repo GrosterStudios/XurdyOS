@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descargas - XurdyOS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <img id="logo" src="logo.png" alt="XurdyOS Logo" onclick="goHome()">
+    <button class="header-btn" onclick="goHome()">Inicio</button>
+</header>
+
+<main>
+    <h1>Descargas</h1>
+    <p>Aquí podés descargar la última versión de XurdyOS o ver todas las releases disponibles.</p>
+
+    <!-- Botón de descarga de la ISO más reciente -->
+    <button id="download-btn" onclick="downloadLatest()">Descarga la Ultima Version</button>
+
+    <!-- Link adicional a todas las releases -->
+    <p style="margin-top:20px;">
+        <a href="https://github.com/GrosterStudios/XurdyOS/releases" target="_blank" style="color:#f0f0f0; text-decoration:underline;">
+            Ver todas las releases
+        </a>
+    </p>
+</main>
+
+<footer>
+    &copy; 2026 GrosterStudios. Todos los derechos reservados.
+</footer>
+
+<script>
+function goHome() {
+    window.location.href = "index.html";
+}
+
+// Descargar la ISO más reciente
+function downloadLatest() {
+    const latestURL = 'https://github.com/GrosterStudios/XurdyOS/releases/latest/download/xurdyos.iso';
+    window.location.href = latestURL;
+}
+</script>
+</body>
+</html>
