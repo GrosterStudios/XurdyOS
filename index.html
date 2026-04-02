@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XurdyOS</title>
+<style>
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+    body {
+        background-color: #0a0a0a;
+        color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #222;
+    }
+
+    /* Logo como botón */
+    #logo {
+        cursor: pointer;
+        height: 50px;
+        width: auto;
+    }
+
+    /* Botones del header */
+    .header-btn {
+        background: none;
+        border: 2px solid #f0f0f0;
+        color: #f0f0f0;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+
+    .header-btn:hover {
+        background-color: #f0f0f0;
+        color: #0a0a0a;
+    }
+
+    /* Main */
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    main h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+    }
+
+    main p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        line-height: 1.6;
+        color: #ccc;
+    }
+
+    /* Download button */
+    #download-btn {
+        margin-top: 2rem;
+        background: #f0f0f0;
+        color: #0a0a0a;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+
+    #download-btn:hover {
+        background: #ccc;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 1rem;
+        border-top: 1px solid #222;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <!-- Logo: reemplazar src por tu logo -->
+    <img id="logo" src="logo.png" alt="XurdyOS Logo" onclick="goHome()">
+    
+    <!-- Botón de Descargas -->
+    <button class="header-btn" onclick="goReleases()">Descargas</button>
+</header>
+
+<main>
+    <h1>XurdyOS</h1>
+    <p>
+        XurdyOS es un sistema operativo moderno, ligero y potente, diseñado para ofrecer la mejor experiencia
+        posible tanto en PCs nuevas como antiguas. Con XurdyOS, podés jugar, trabajar y explorar con velocidad,
+        seguridad y estilo. Nuestro ecosistema está optimizado para rendimiento y facilidad de uso, sin complicaciones.
+    </p>
+
+    <!-- Botón de descarga de la ISO más reciente -->
+    <button id="download-btn" onclick="downloadLatest()">Download Latest</button>
+</main>
+
+<footer>
+    &copy; 2026 GrosterStudios. Todos los derechos reservados.
+</footer>
+
+<script>
+    // Función para ir al inicio (logo)
+    function goHome() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Función para ir a la página de releases en GitHub
+    function goReleases() {
+        window.open('https://github.com/GrosterStudios/XurdyOS/releases', '_blank');
+    }
+
+    // Función para descargar la última ISO
+    function downloadLatest() {
+        // URL de ejemplo, reemplazar con la URL real de tu release
+        const latestURL = 'https://github.com/GrosterStudios/XurdyOS/releases/latest/download/xurdyos.iso';
+        window.location.href = latestURL;
+    }
+</script>
+
+</body>
+</html>
